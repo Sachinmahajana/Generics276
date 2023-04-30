@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to the Generic Programs");
             Console.WriteLine("Select the program given below");
-            Console.WriteLine("\n1:SimpleArray\n2:Genericmethod");
+            Console.WriteLine("\n1:SimpleArray\n2:Genericmethod\n3:Gnericclass");
             int option = Convert.ToInt32(Console.ReadLine());
             int[] intArray = { 2, 3, 4, 5 };
             double[] doubleArray = { 2.3, 4.5, 5.7, 7.8 };
@@ -22,6 +22,14 @@
                     Genericmethod.ToPrint<int>(intArray);
                     Genericmethod.ToPrint<double>(doubleArray);
                     Genericmethod.ToPrint<char>(charArray);
+                    break;
+                case 3:
+                    Genericclass<int> intObj = new Genericclass<int>(intArray);
+                    intObj.Toprint();
+                    Genericclass<double> doubleObj = new Genericclass<double>(doubleArray);
+                    doubleObj.Toprint();
+                    Genericclass<char> charObj = new Genericclass<char>(charArray);
+                    charObj.Toprint();
                     break;
                 default:
                     Console.WriteLine("Please select the program given below");
